@@ -7,16 +7,16 @@
   <meta name="description" content="简洁科技感的网址导航页，含百度搜索与常用站点快捷入口。" />
   <style>
     :root {
-      --bg: #1a315d;
-      --bg-soft: rgba(255,255,255,0.12);
-      --card: rgba(255, 255, 255, 0.10);
-      --card-border: rgba(205, 228, 255, 0.24);
-      --text: #fbfdff;
-      --muted: #d7e1f0;
-      --accent: #84c7ff;
-      --accent-2: #92a2ff;
-      --glow: rgba(132, 199, 255, 0.24);
-      --shadow: 0 20px 46px rgba(6, 17, 40, 0.22);
+      --bg: #06111f;
+      --surface: rgba(13, 33, 57, 0.66);
+      --surface-strong: rgba(18, 43, 72, 0.84);
+      --border: rgba(167, 220, 255, 0.16);
+      --text: #f4f9ff;
+      --muted: #a8bed3;
+      --accent: #5de2c5;
+      --accent-2: #75a7ff;
+      --glow: rgba(83, 209, 201, 0.22);
+      --shadow: 0 24px 60px rgba(0, 5, 17, 0.42);
     }
 
     * { box-sizing: border-box; }
@@ -25,10 +25,10 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 14% 10%, rgba(169, 225, 255, 0.28), transparent 26%),
-        radial-gradient(circle at 86% 12%, rgba(154, 169, 255, 0.18), transparent 24%),
-        radial-gradient(circle at 50% -8%, rgba(230, 245, 255, 0.16), transparent 32%),
-        linear-gradient(180deg, #27497f 0%, #213f72 42%, #19345f 100%);
+        radial-gradient(circle at 12% -8%, rgba(72, 151, 255, 0.28), transparent 30%),
+        radial-gradient(circle at 92% 12%, rgba(64, 227, 194, 0.16), transparent 24%),
+        radial-gradient(circle at 52% 105%, rgba(73, 104, 213, 0.22), transparent 34%),
+        linear-gradient(155deg, #08182b 0%, #071424 48%, #06101e 100%);
       min-height: 100vh;
     }
 
@@ -36,10 +36,10 @@
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-      background-size: 28px 28px;
-      mask-image: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.16));
+        linear-gradient(rgba(155, 205, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(155, 205, 255, 0.045) 1px, transparent 1px);
+      background-size: 36px 36px;
+      mask-image: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.08));
       pointer-events: none;
     }
 
@@ -48,29 +48,72 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(90deg, transparent 0%, rgba(120, 210, 255, 0.05) 50%, transparent 100%),
-        linear-gradient(180deg, transparent 0%, rgba(138, 114, 255, 0.04) 50%, transparent 100%);
+        linear-gradient(90deg, transparent 0%, rgba(104, 203, 255, 0.10) 50%, transparent 100%),
+        linear-gradient(180deg, transparent 0%, rgba(94, 227, 193, 0.05) 50%, transparent 100%);
       mix-blend-mode: screen;
     }
 
     .container {
       position: relative;
-      max-width: 1200px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 40px 20px 28px;
+      padding: 44px 22px 34px;
     }
 
     .hero {
+      position: relative;
+      overflow: hidden;
       text-align: center;
-      margin-bottom: 28px;
+      margin: 0 auto 22px;
+      max-width: 920px;
+      padding: 30px 26px 24px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(24, 61, 99, 0.76), rgba(9, 25, 45, 0.72));
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.06);
+      backdrop-filter: blur(20px);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 180px;
+      top: -135px;
+      left: calc(50% - 180px);
+      border-radius: 50%;
+      background: rgba(93, 226, 197, 0.23);
+      filter: blur(48px);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #b9d2e8;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.7px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 14px var(--accent);
     }
 
     .hero-logo {
-      max-width: 760px;
-      width: min(90vw, 760px);
-      margin: 2px auto 12px;
+      position: relative;
+      max-width: 620px;
+      width: min(88vw, 620px);
+      margin: 13px auto 7px;
       display: block;
-      filter: drop-shadow(0 12px 28px rgba(72, 126, 215, 0.10));
+      filter: drop-shadow(0 12px 24px rgba(0, 8, 26, 0.28));
     }
 
     .hero h1 {
@@ -82,71 +125,100 @@
     }
 
     .hero p {
-      display: none;
+      position: relative;
+      display: block;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.5px;
     }
 
     .search-wrap {
-      margin: 30px auto 36px;
-      max-width: 760px;
-      padding: 18px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
+      margin: 20px auto 30px;
+      max-width: 840px;
+      padding: 12px;
+      background: rgba(8, 25, 45, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 20px;
       backdrop-filter: blur(20px);
-      box-shadow: var(--shadow);
+      box-shadow: 0 16px 40px rgba(0, 5, 17, 0.28);
     }
 
     .search-form {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .search-form input {
       flex: 1 1 520px;
       min-width: 0;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(168, 214, 255, 0.13);
+      border-radius: 13px;
+      background: rgba(255,255,255,0.055);
       color: var(--text);
       font-size: 16px;
-      padding: 16px 18px;
+      padding: 15px 18px;
       outline: none;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
     }
 
-    .search-form input::placeholder { color: #b2c8ea; }
+    .search-form input::placeholder { color: #7793ad; }
+    .search-form input:focus {
+      border-color: rgba(93, 226, 197, 0.55);
+      background: rgba(255,255,255,0.075);
+      box-shadow: 0 0 0 4px rgba(93, 226, 197, 0.10);
+    }
 
     .search-form button {
       border: none;
-      border-radius: 16px;
-      padding: 0 26px;
-      font-size: 16px;
+      border-radius: 13px;
+      padding: 0 23px;
+      font-size: 15px;
       font-weight: 700;
       color: white;
       cursor: pointer;
-      background: linear-gradient(135deg, #6ab7ff, #8190ff);
+      background: linear-gradient(135deg, #48cbb3, #5494ee);
       box-shadow: 0 8px 22px var(--glow);
+      transition: transform .18s ease, filter .18s ease;
     }
+    .search-form button:hover { transform: translateY(-1px); filter: brightness(1.08); }
 
     .categories {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
     .category {
-      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.07));
-      border: 1px solid var(--card-border);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(150deg, rgba(22, 53, 84, 0.74), rgba(9, 26, 47, 0.72));
+      border: 1px solid var(--border);
       border-radius: 22px;
-      padding: 22px;
-      box-shadow: var(--shadow);
+      padding: 21px;
+      box-shadow: 0 16px 38px rgba(0, 5, 17, 0.24), inset 0 1px 0 rgba(255,255,255,0.045);
       backdrop-filter: blur(18px);
     }
 
+    .category::after {
+      content: "";
+      position: absolute;
+      right: -68px;
+      bottom: -88px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(94, 181, 255, 0.12), transparent 67%);
+      pointer-events: none;
+    }
+
     .category h2 {
-      margin: 0 0 14px;
-      font-size: 18px;
+      position: relative;
+      margin: 0 0 15px;
+      font-size: 16px;
+      letter-spacing: .3px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -154,16 +226,17 @@
 
     .category h2 span {
       display: inline-flex;
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       border-radius: 999px;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 10px var(--glow);
+      box-shadow: 0 0 12px var(--accent);
     }
 
     .links {
       display: grid;
-      gap: 10px;
+      position: relative;
+      gap: 9px;
     }
 
     .link-item {
@@ -173,19 +246,19 @@
       gap: 12px;
       text-decoration: none;
       color: var(--text);
-      padding: 13px 15px;
-      border-radius: 15px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.09);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      padding: 13px 14px 13px 15px;
+      border-radius: 13px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(173, 218, 255, 0.09);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.035);
       transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
     }
 
     .link-item:hover {
-      transform: translateY(-2px);
-      border-color: rgba(132,199,255,0.32);
-      background: rgba(255,255,255,0.10);
-      box-shadow: 0 10px 22px rgba(20, 52, 100, 0.14);
+      transform: translateX(3px);
+      border-color: rgba(93, 226, 197, 0.38);
+      background: linear-gradient(90deg, rgba(93, 226, 197, 0.12), rgba(104, 158, 255, 0.08));
+      box-shadow: 0 10px 22px rgba(0, 7, 23, 0.18);
     }
 
     .link-main {
@@ -195,21 +268,29 @@
     }
 
     .link-title {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
     }
 
     .arrow {
-      color: #b8c8e6;
-      font-size: 18px;
+      display: grid;
+      place-items: center;
+      width: 27px;
+      height: 27px;
+      border-radius: 9px;
+      color: #b9d9f4;
+      font-size: 15px;
       flex-shrink: 0;
+      background: rgba(113, 177, 235, 0.10);
     }
 
     footer {
-      margin-top: 34px;
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(163, 212, 255, 0.12);
       text-align: center;
-      color: rgba(245, 250, 255, 0.88);
-      font-size: 14px;
+      color: #8fa9c0;
+      font-size: 13px;
       line-height: 1.8;
       letter-spacing: 0.2px;
     }
@@ -217,11 +298,13 @@
     .tip {
       margin-top: 10px;
       font-size: 12px;
-      color: #7f95bd;
+      color: #7691aa;
     }
 
-    @media (max-width: 640px) {
-      .container { padding: 28px 14px 22px; }
+    @media (max-width: 700px) {
+      .container { padding: 22px 14px 24px; }
+      .hero { padding: 24px 16px 20px; border-radius: 23px; }
+      .categories { grid-template-columns: 1fr; }
       .search-form button { width: 100%; min-height: 52px; }
     }
   </style>
@@ -230,9 +313,10 @@
   <div class="grid-bg"></div>
   <div class="container">
     <section class="hero">
+      <div class="eyebrow">ZHUOHUA NETWORK · WORKSPACE</div>
       <img class="hero-logo" src="./logo-horizontal.png" alt="灼华网络科技" />
       <h1>灼华网络科技导航</h1>
-      <p>灼华网络科技导航</p>
+      <p>常用业务与工具，一处直达</p>
     </section>
 
     <section class="search-wrap">
