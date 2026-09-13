@@ -307,16 +307,149 @@
       .categories { grid-template-columns: 1fr; }
       .search-form button { width: 100%; min-height: 52px; }
     }
+    /* Workspace layout */
+    body { background: #f3f6fa; color: #18324c; }
+    .grid-bg { display: none; }
+    .app-shell { display: flex; min-height: 100vh; }
+    .sidebar {
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex: 0 0 232px;
+      flex-direction: column;
+      width: 232px;
+      height: 100vh;
+      padding: 28px 16px 20px;
+      background: #fff;
+      border-right: 1px solid #e3ebf3;
+    }
+    .brand-lockup { display: flex; align-items: center; gap: 11px; padding: 0 10px 38px; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 11px;
+      color: #fff;
+      font-size: 19px;
+      font-weight: 800;
+      background: linear-gradient(145deg, #2bb79d, #5b8fe3);
+      box-shadow: 0 8px 18px rgba(62, 150, 181, .23);
+    }
+    .brand-lockup strong { display: block; color: #16304a; font-size: 16px; letter-spacing: .2px; }
+    .brand-lockup small, .sidebar-bottom small { display: block; margin-top: 3px; color: #8a9caf; font-size: 11px; }
+    .sidebar-label { padding: 0 12px 10px; color: #a1afbd; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; }
+    .side-nav { display: grid; gap: 5px; }
+    .side-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 11px 12px;
+      border-radius: 11px;
+      color: #6c7f92;
+      font-size: 13px;
+      font-weight: 650;
+      text-decoration: none;
+      transition: .18s ease;
+    }
+    .side-nav-item:hover { color: #244d73; background: #f0f6fb; }
+    .side-nav-item.active { color: #157e70; background: #e7f7f3; }
+    .nav-icon { display: grid; place-items: center; width: 21px; color: #7f9ab4; font-size: 17px; }
+    .side-nav-item.active .nav-icon { color: #1aaf91; }
+    .sidebar-bottom { display: flex; align-items: center; gap: 9px; margin-top: auto; padding: 14px 10px 0; border-top: 1px solid #edf1f5; }
+    .sidebar-bottom strong { display: block; color: #4d687f; font-size: 11px; font-weight: 700; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #35bb9b; box-shadow: 0 0 0 4px #e2f7f1; }
+    .main-panel { min-width: 0; flex: 1; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto; padding: 28px 22px 0; }
+    .topbar-kicker { color: #91a0b0; font-size: 10px; font-weight: 800; letter-spacing: 1.8px; }
+    .topbar h1 { margin: 6px 0 0; color: #18324c; font-size: 23px; letter-spacing: -.4px; }
+    .online-pill { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid #dce9e7; border-radius: 999px; color: #438071; background: #f5fcfa; font-size: 11px; font-weight: 700; }
+    .online-pill span { width: 7px; height: 7px; border-radius: 50%; background: #36b898; }
+    .container { max-width: 1180px; padding: 24px 22px 34px; }
+    .hero { display: flex; align-items: center; justify-content: space-between; min-height: 205px; max-width: none; margin: 0 0 20px; padding: 34px 40px; border: 0; border-radius: 25px; background: linear-gradient(118deg, #183b65 0%, #255d8a 63%, #2c8c91 100%); box-shadow: 0 20px 38px rgba(52, 103, 145, .21); }
+    .hero::before { width: 420px; height: 260px; top: -180px; left: auto; right: 12%; background: rgba(128, 227, 206, .30); }
+    .hero-copy { position: relative; z-index: 1; }
+    .hero .eyebrow { color: #a9dcd7; font-size: 10px; letter-spacing: 1.8px; }
+    .hero h2 { margin: 14px 0 8px; color: #fff; font-size: clamp(27px, 4vw, 39px); letter-spacing: -1px; }
+    .hero p { color: #c4dbea; font-size: 13px; }
+    .hero-visual { position: relative; width: min(41%, 320px); text-align: right; }
+    .hero-visual::after { content: ""; position: absolute; inset: -25px -18px; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; transform: rotate(-11deg); pointer-events: none; }
+    .hero-visual .hero-logo { width: 100%; max-width: 320px; margin: 0 0 5px auto; filter: drop-shadow(0 10px 18px rgba(0, 12, 29, .26)); }
+    .hero-visual span { position: relative; color: #a9d9e0; font-size: 10px; letter-spacing: 2px; }
+    .search-wrap { display: flex; align-items: center; gap: 16px; max-width: none; margin: 0 0 20px; padding: 9px 11px; border: 1px solid #e0e9f1; border-radius: 15px; background: #fff; box-shadow: 0 8px 22px rgba(74, 115, 149, .07); }
+    .search-form { flex: 1; }
+    .search-form input { padding: 13px 15px; border: 1px solid #e5edf4; background: #f8fbfd; color: #284662; font-size: 14px; }
+    .search-form button { min-height: 44px; border-radius: 10px; padding: 0 20px; font-size: 13px; }
+    .tip { flex: 0 0 auto; margin: 0 8px 0 0; color: #9aa9b7; font-size: 11px; }
+    .categories { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+    .category { grid-column: span 6; padding: 20px; border: 1px solid #e2eaf1; border-radius: 18px; background: #fff; box-shadow: 0 9px 26px rgba(73, 112, 145, .08); }
+    .category:nth-child(1) { grid-column: span 7; }
+    .category:nth-child(2) { grid-column: span 5; }
+    .category:nth-child(3) { grid-column: span 5; }
+    .category:nth-child(4) { grid-column: span 7; }
+    .category::after { background: radial-gradient(circle, rgba(84, 169, 235, .09), transparent 67%); }
+    .category h2 { color: #264560; margin-bottom: 13px; font-size: 15px; }
+    .link-item { padding: 11px 12px; border-color: #e8eef4; border-radius: 10px; background: #f9fbfd; }
+    .link-item:hover { border-color: #a9ded4; background: #f0fbf8; box-shadow: 0 6px 16px rgba(71, 151, 144, .09); }
+    .link-title { color: #36536c; font-size: 13px; }
+    .arrow { width: 24px; height: 24px; border-radius: 7px; color: #7092ad; background: #edf4fa; }
+    footer { color: #8799aa; border-top-color: #e1e9f1; }
+    @media (max-width: 900px) {
+      .sidebar { flex-basis: 190px; width: 190px; }
+      .category:nth-child(n) { grid-column: span 6; }
+    }
+    @media (max-width: 700px) {
+      .app-shell { display: block; }
+      .sidebar { position: relative; width: 100%; height: auto; padding: 15px 14px; border-right: 0; border-bottom: 1px solid #e3ebf3; }
+      .brand-lockup { padding: 0 4px 14px; }
+      .sidebar-label, .sidebar-bottom { display: none; }
+      .side-nav { display: flex; gap: 5px; overflow-x: auto; }
+      .side-nav-item { flex: 0 0 auto; padding: 9px 10px; font-size: 12px; }
+      .nav-icon { display: none; }
+      .topbar { padding-top: 20px; }
+      .hero { align-items: flex-start; min-height: 220px; padding: 27px 24px; }
+      .hero-visual { width: 38%; margin-top: 36px; }
+      .hero-visual span { display: none; }
+      .search-wrap { display: block; padding: 10px; }
+      .tip { margin: 9px 4px 0; }
+      .category:nth-child(n) { grid-column: span 12; }
+    }
   </style>
 </head>
 <body>
-  <div class="grid-bg"></div>
-  <div class="container">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-lockup">
+        <div class="brand-mark">S</div>
+        <div><strong>Space</strong><small>枫叶导航</small></div>
+      </div>
+      <div class="sidebar-label">工作台</div>
+      <nav class="side-nav" aria-label="分类导航">
+        <a class="side-nav-item active" href="#business"><span class="nav-icon">⌁</span>办公 / 业务</a>
+        <a class="side-nav-item" href="#finance"><span class="nav-icon">▣</span>银行 / 税务</a>
+        <a class="side-nav-item" href="#commerce"><span class="nav-icon">◇</span>电商 / 内容</a>
+        <a class="side-nav-item" href="#tools"><span class="nav-icon">✦</span>AI / 工具</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <div><strong>Space Workspace</strong><small>常用入口已就绪</small></div>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div><span class="topbar-kicker">ZHUOHUA NETWORK</span><h1>工作台</h1></div>
+        <div class="online-pill"><span></span>在线导航</div>
+      </header>
+
+      <div class="container">
     <section class="hero">
-      <div class="eyebrow">ZHUOHUA NETWORK · WORKSPACE</div>
-      <img class="hero-logo" src="./logo-horizontal.png" alt="灼华网络科技" />
-      <h1>灼华网络科技导航</h1>
-      <p>常用业务与工具，一处直达</p>
+      <div class="hero-copy">
+        <div class="eyebrow">GOOD TO SEE YOU</div>
+        <h2>常用入口，一处直达</h2>
+        <p>把每天要用的业务、工具和服务整理在这里。</p>
+      </div>
+      <div class="hero-visual"><img class="hero-logo" src="./logo-horizontal.png" alt="灼华网络科技" /><span>SPACE / 2026</span></div>
     </section>
 
     <section class="search-wrap">
@@ -328,7 +461,7 @@
     </section>
 
     <section class="categories">
-      <div class="category">
+      <div id="business" class="category">
         <h2><span></span>办公 / 业务</h2>
         <div class="links">
           <a class="link-item" href="https://211.138.17.10:9095/WSKF/s_channel/login.action" target="_blank" rel="noreferrer">
@@ -358,7 +491,7 @@
         </div>
       </div>
 
-      <div class="category">
+      <div id="finance" class="category">
         <h2><span></span>银行 / 税务</h2>
         <div class="links">
           <a class="link-item" href="https://ebank.hnnx.com/enp/page/index/03/main.html" target="_blank" rel="noreferrer">
@@ -376,7 +509,7 @@
         </div>
       </div>
 
-      <div class="category">
+      <div id="commerce" class="category">
         <h2><span></span>电商 / 内容</h2>
         <div class="links">
           <a class="link-item" href="https://www.smzdm.com/" target="_blank" rel="noreferrer">
@@ -402,7 +535,7 @@
         </div>
       </div>
 
-      <div class="category">
+      <div id="tools" class="category">
         <h2><span></span>AI / 工具</h2>
         <div class="links">
           <a class="link-item" href="https://cli.im/deqr" target="_blank" rel="noreferrer">
@@ -432,6 +565,8 @@
     <footer>
       <div>制作：space枫叶 ｜ QQ：75907474 ｜ 许昌市灼华网络科技有限公司</div>
     </footer>
+      </div>
+    </main>
   </div>
 </body>
 </html>
