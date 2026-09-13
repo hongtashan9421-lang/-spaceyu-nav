@@ -474,6 +474,50 @@
       .category:nth-child(n) { margin-bottom: 35px; }
       footer { margin: 46px 24px 0; }
     }
+    /* Chinese ink-and-paper treatment */
+    body { color: #2a2825; background: #f4eee4; font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif; }
+    .site-nav { max-width: 1440px; padding: 27px 48px; color: #f5ecdf; }
+    .site-wordmark { color: #f5ecdf; font-family: "Noto Serif SC", "Songti SC", serif; font-size: 18px; letter-spacing: 2px; }
+    .site-wordmark span { color: #c9694e; }
+    .site-links { gap: 34px; }
+    .site-links a, .nav-contact { color: rgba(246, 235, 218, .74); font-family: "Noto Serif SC", "Songti SC", serif; font-size: 12px; font-weight: 600; }
+    .site-links a:hover, .nav-contact:hover { color: #fff8ed; }
+    .nav-contact { border-color: rgba(235, 203, 167, .32); border-radius: 3px; }
+    .nav-contact span { color: #d37a5d; }
+    .hero { min-height: 680px; height: 91vh; padding: 0 10vw 13vh; background: radial-gradient(circle at 73% 34%, rgba(102, 85, 64, .28), transparent 25%), radial-gradient(circle at 78% 41%, rgba(148, 54, 40, .22), transparent 12%), linear-gradient(115deg, #171b1b 0%, #242827 58%, #30332e 100%); }
+    .hero::before { width: 470px; height: 270px; top: -100px; right: 12%; left: auto; background: rgba(198, 83, 58, .16); filter: blur(75px); }
+    .hero::after { right: 4vw; top: 18%; width: min(45vw, 610px); border: 1px solid rgba(218, 190, 149, .15); box-shadow: 0 0 0 42px rgba(218, 190, 149, .028), 0 0 0 86px rgba(218, 190, 149, .020); }
+    .hero-copy { max-width: 700px; }
+    .hero .eyebrow { color: #c99878; font-family: "Noto Serif SC", "Songti SC", serif; font-size: 12px; letter-spacing: 2px; }
+    .hero h2 { margin: 20px 0 19px; font-family: "Noto Serif SC", "Songti SC", "STKaiti", serif; font-size: clamp(47px, 7.2vw, 104px); font-weight: 600; letter-spacing: -4px; line-height: 1.03; }
+    .hero h2 em { color: #d8bd95; }
+    .hero p { color: rgba(236, 222, 201, .68); font-family: "Noto Serif SC", "Songti SC", serif; font-size: 14px; letter-spacing: 2px; }
+    .hero-visual { right: 10vw; top: 32%; width: min(34vw, 430px); }
+    .hero-visual::after { border-color: rgba(217, 187, 143, .19); transform: rotate(14deg); }
+    .hero-visual .hero-logo { filter: sepia(.14) drop-shadow(0 18px 27px rgba(0, 0, 0, .43)); }
+    .hero-visual span { color: rgba(222, 197, 163, .68); font-family: "Noto Serif SC", "Songti SC", serif; letter-spacing: 2px; }
+    .seal { position: absolute; z-index: 2; top: -33px; right: -12px; display: grid; place-items: center; width: 57px; height: 57px; color: #a83d31; border: 3px solid #a83d31; border-radius: 7px; font-family: "STKaiti", "KaiTi", serif; font-size: 22px; font-weight: 700; line-height: 1.05; transform: rotate(8deg); opacity: .90; }
+    .search-wrap { max-width: 980px; margin: -35px auto 82px; border: 1px solid #d9c9b2; border-radius: 4px; background: rgba(249, 243, 233, .96); box-shadow: 0 13px 30px rgba(77, 55, 36, .13); }
+    .search-form input { color: #4a3c31; font-family: "Noto Serif SC", "Songti SC", serif; }
+    .search-form input::placeholder { color: #aa9a87; }
+    .search-form button { border-radius: 3px; color: #f9f0e4; font-family: "Noto Serif SC", "Songti SC", serif; background: #30312d; }
+    .search-form button:hover { background: #a94738; }
+    .categories { max-width: 1120px; gap: 46px 34px; }
+    .category:nth-child(n) { border-bottom-color: #d5c8b7; }
+    .category h2 { color: #40372f; font-family: "Noto Serif SC", "Songti SC", serif; font-size: 16px; letter-spacing: 2px; }
+    .category h2 span { width: 6px; height: 16px; border-radius: 0; background: #ad4c3c; box-shadow: none; }
+    .link-item { border-top-color: #e3d9cc; }
+    .link-item:hover { transform: translateX(5px); background: rgba(255, 250, 242, .65); }
+    .link-title { color: #51463b; font-family: "Noto Serif SC", "Songti SC", serif; font-size: 14px; }
+    .arrow { color: #a74a3b; font-family: Georgia, serif; }
+    footer { border-top-color: #d5c8b7; color: #9d8e7d; font-family: "Noto Serif SC", "Songti SC", serif; }
+    @media (max-width: 760px) {
+      .site-nav { padding: 21px 20px; }
+      .hero { min-height: 650px; height: 84vh; padding: 0 25px 88px; }
+      .hero h2 { font-size: clamp(45px, 14vw, 76px); letter-spacing: -3px; }
+      .hero-visual { right: 24px; top: 25%; width: 58vw; max-width: 290px; }
+      .seal { top: -23px; right: -7px; width: 45px; height: 45px; font-size: 17px; }
+    }
   </style>
 </head>
 <body>
@@ -498,11 +542,11 @@
 
     <main class="main-panel">
       <header class="site-nav">
-        <a class="site-wordmark" href="#top">SPACE<span>/</span>枫叶</a>
+        <a class="site-wordmark" href="#top">SPACE<span>/</span>灼华</a>
         <nav class="site-links" aria-label="主导航">
-          <a href="#business">业务</a><a href="#finance">财务</a><a href="#commerce">内容</a><a href="#tools">工具</a>
+          <a href="#business">商务</a><a href="#finance">财税</a><a href="#commerce">生活</a><a href="#tools">灵感</a>
         </nav>
-        <a class="nav-contact" href="#search">快速访问 <span>↗</span></a>
+        <a class="nav-contact" href="#search">一键寻路 <span>↗</span></a>
       </header>
       <header class="topbar">
         <div><span class="topbar-kicker">ZHUOHUA NETWORK</span><h1>工作台</h1></div>
@@ -512,11 +556,11 @@
       <div id="top" class="container">
     <section class="hero">
       <div class="hero-copy">
-        <div class="eyebrow">ZHUOHUA NETWORK TECHNOLOGY</div>
-        <h2>让每一次访问<br /><em>都更简单。</em></h2>
-        <p>灼华网络科技 · 常用业务与工具导航</p>
+        <div class="eyebrow">灼华网络科技 · 枫叶导航</div>
+        <h2>一页藏万象<br /><em>万事皆可达。</em></h2>
+        <p>观乎人文，以化成天下 · 常用业务与工具导航</p>
       </div>
-      <div class="hero-visual"><img class="hero-logo" src="./logo-horizontal.png" alt="灼华网络科技" /><span>SPACE / 2026</span></div>
+      <div class="hero-visual"><div class="seal">灼华</div><img class="hero-logo" src="./logo-horizontal.png" alt="灼华网络科技" /><span>SPACE · 枫叶导航</span></div>
     </section>
 
     <section id="search" class="search-wrap">
